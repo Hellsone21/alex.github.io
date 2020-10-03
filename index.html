@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+	<meta charset="utf-8">
+    <title>Online-Stores</title>
+    <link rel="stylesheet" href="styles.css">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="kewords" content="">
+	<link rel="shortcut icon" href="logo_vkladka.gif">
+</head>
+<body> 
+
+    <header>
+        <div class="header_container">
+                <img class="header_container-logo" height="75px" src="os2.svg" alt="Logo">
+             <div class="header_input">
+        <input type="text" placeholder="      Поиск" class="header_search">
+        <img src="search_icon.png" class="input_icon">
+    </div>
+    
+    <script>
+    
+    var icon = document.querySelector(".input_icon");
+    var input = document.querySelector(".header_search");
+        
+    input.addEventListener("focus",insideRemover);
+        
+    function insideRemover() {
+        icon.style.display = "none";
+        input.placeholder = "";
+        window.addEventListener("mousedown",function(event) {
+            if (event.target.className != "header_search" && input.value == "") {
+                input.placeholder = "      Поиск";
+                icon.style.display = "block";
+            }    
+        })
+    }
+        
+    </script>
+            <nav>
+                <ul type=none>
+                    <li><a href="">Сотрудничество</a></li>
+                    <li><a href="">Магазины</a></li>
+                    <li><a href="">Помощь</a></li>
+                    <li><a href="">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+</body>
+</html>
